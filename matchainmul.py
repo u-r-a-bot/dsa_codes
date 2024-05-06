@@ -7,7 +7,7 @@ def matchainmul(arr):
         table[i][i] , s[i][i] = 0 ,0
     for subchain in range(2 , n+1): # Starting to select a subchain of length 2
         for i in range(0 ,n-subchain+1 ): #Starting value of i from zero
-            j = i+subchain -1       # initializing i value
+            j = i+subchain -1       # initializing j value
             table[i][j] = float('inf') #Storing a max value
             for k in range(i , j): #  initializing value of k between i and j
                 val = table[i][k] + table[k+1][j] + arr[i]* arr[k+1] * arr[j+1] # Calculating Value
